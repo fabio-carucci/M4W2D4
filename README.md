@@ -6,7 +6,7 @@ ESERCIZI:
 seguenti requisiti:
   1. Una homepage che mostri tutti i libri con delle card di bootstrap
   2. Le card dovrebbero avere un pulsante per aggiungere al carrello e uno per
-    "saltare" un prodotto
+    "salvare" un prodotto
   3. Una sezione per il carrello
   4. Un input di testo per cercare i libri
 • Per raggiungere questo risultato, segui queste istruzioni:

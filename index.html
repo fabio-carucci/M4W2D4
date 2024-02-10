@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pexels fetching</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-2" href="#">EPICBooks</a>
+                <div class="d-flex justify-content-end me-2">
+                    <div class="d-flex align-items-center">
+                        <div class="cart me-3">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="dropdown profile">
+                            <img src="assets/IMG_2859.JPG" alt="Profile Picture" class="rounded-circle" width="30" height="30" data-bs-toggle="dropdown" aria-expanded="false">
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item fs-5 text-uppercase" href="#">Fabio Carucci</a></li>
+                                <li><a class="dropdown-item fs-6 fst-italic" href="#">garu2000@live.it</a></li>
+                                <!-- <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Altro...</a></li> -->
+                            </ul>
+                          </div>                    
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <!-- Descrizione del sito -->
+            <div class="jumbotron mt-4 mt-md-5">
+                <h5 class="fs-2 mb-3">Benvenuto su "EPICBooks by FC" - il tuo destino online per l'amore per la lettura!</h5>
+                <div>
+                    <p class="fs-4">Esplora il vasto mondo dei libri nel comfort della tua casa. Da bestseller mozzafiato a gemme letterarie nascoste, abbiamo tutto ciò di cui hai bisogno per soddisfare la tua sete di conoscenza.</p>
+                    <p class="fst-italic">Naviga attraverso le nostre selezioni curate con attenzione, scopri nuovi autori e immergiti in avventure senza fine. 
+                        Con "EPICBooks", è facile aggiungere i tuoi titoli preferiti al carrello e tenerli da parte per ulteriori esplorazioni. Il tuo carrello è il tuo santuario personale, dove puoi raccogliere i libri che catturano la tua attenzione. 
+                        Rivedili quando vuoi, confronta le tue scelte e fai spazio per nuove storie. E se una storia ti rapisce completamente, non preoccuparti! Con pochi clic, puoi acquistare i libri che hai selezionato e portare a casa i tesori letterari che desideri possedere.</p>
+                </div>
+            </div>
+            <!-- Barra di ricerca dei libri -->
+            <div class="container">
+                <form>
+                    <input type="text" placeholder="Scrivi titolo..." name="searchBooks" id="searchBooks">
+                    <button type="button" id="searchButton">CERCA</button>
+                    <button type="button" id="resetButton" style="display: none;">Annulla ricerca</button>
+                </form>
+            </div>
+            <!-- Zona libri -->
+            <div class="container-fluid">
+                <div class="row mx-lg-3 mt-3 gy-4">
+                    <!-- <div class="col-6 col-md-4 col-xl-2">
+                        <div class="card customCard">
+                            <img src="#" class="card-img-top" alt="Libro di ...">
+                            <div class="card-body">
+                                <h6 class="card-title">Fabio Carucci</h6>
+                                <div class="card-info">
+                                    <div class="price">7.91€</div>
+                                    <div class="save">
+                                        <i class="fa-regular fa-bookmark"></i>
+                                        <button type="button" class="addCart">
+                                            <span>AGGIUNGI AL </span>
+                                            <i class="fa-solid fa-cart-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+    
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.1"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

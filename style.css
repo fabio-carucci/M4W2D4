@@ -1,0 +1,215 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    background-color: rgba(177, 0, 0, 0.217);
+    border-bottom: 1px solid rgba(177, 0, 0, 0.199);
+}
+
+a.navbar-brand {
+    color: rgb(177, 0, 0);
+    font-weight: bold;
+    font-size: 1.5em
+}
+
+.profile img {
+    border: 1px solid rgba(177, 0, 0, 0.436);
+}
+
+.cart, .profile {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cart:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.jumbotron {
+    text-shadow: 0px 0px 1px rgb(177, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.jumbotron div {
+    text-shadow: none;
+    color: rgb(177, 0, 0);
+    width: 70%;
+    text-align: center;
+}
+
+/* Sezione ricerca libri */
+
+.jumbotron + div {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+}
+
+form > * {
+    border: 1px solid rgb(177, 0, 0);
+}
+
+form input {
+    border-radius: 5px 0 0 5px;
+    padding: 5px;
+    width: 400px;
+}
+
+form input:focus {
+    outline: 2px solid rgba(177, 0, 0, 0.436);
+    outline-offset: 0px;
+}
+
+#searchButton {
+    font-weight: bold;
+    border-radius: 0 5px 5px 0; 
+    border-left: none;
+    background-color: transparent;
+    padding: 5px 15px;
+    color: rgb(177, 0, 0);
+    transition: all 0.2s;
+}
+
+#searchButton:hover {
+    color: white;
+    background-color: rgb(177, 0, 0);
+}
+
+#resetButton {
+    border: none;
+    background-color: transparent;
+    padding: 5px 15px;
+    color: rgb(177, 0, 0);
+}
+
+/* Sezione libri */
+
+.customCard {
+    border: none;
+    background-color: rgba(177, 0, 0, 0.217);
+    transition: all 0.3s;
+}
+
+.customCard:hover {
+    transform: scale(1.05);
+}
+
+.customCard img {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.customCard .card-body {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.customCard .card-body h6 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.customCard .card-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.customCard .card-info .price {
+    font-size: 10pt;
+} 
+
+.customCard .card-info .save {
+    display: flex;
+    align-items: center;  
+    gap: 5px;  
+}
+
+.addCart {
+    font-size: 7pt;
+    border: 1px solid rgba(177, 0, 0, 0.436);
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(177, 0, 0);
+    transition: all 0.2s;
+}
+
+.addCart:hover {
+    color: white;
+    border-color: white;
+    background-color: rgb(177, 0, 0);
+}
+
+@media screen and (max-width: 1400px) {
+    .customCard .card-info .price {
+        font-size: 9pt;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .jumbotron h5 {
+        width: 90%;
+    }
+    .jumbotron div {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        position: relative;
+    }
+    #resetButton {
+        padding: 0;
+        position: absolute;
+        right: -10px;
+        top: 110%;
+    }
+}
+
+@media screen and (max-width: 576px){
+    form input {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .jumbotron div p:first-child {
+        font-size: 12pt !important;
+    }
+    .jumbotron div p:last-child {
+        font-size: 10pt !important;
+    }
+    .customCard img {
+        height: 250px;
+    }
+    .customCard:hover {
+        transform: scale(1);
+    }
+    .customCard .card-body h6 {
+        font-size: 0.8em;
+    }
+    .addCart {
+        font-size: 6pt;
+    }
+    .customCard .card-info .save {
+        gap: 2px;  
+    }
+    .customCard .card-info .price {
+        font-size: 8pt;
+    }
+}
