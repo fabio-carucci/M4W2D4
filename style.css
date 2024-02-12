@@ -3,7 +3,7 @@ body {
 }
 
 nav {
-    background-color: rgba(177, 0, 0, 0.217);
+    background-color: rgb(243, 198, 198);
     border-bottom: 1px solid rgba(177, 0, 0, 0.199);
 }
 
@@ -25,6 +25,12 @@ a.navbar-brand {
 .cart:hover {
     transform: scale(1.1);
     transition: all 0.3s;
+}
+
+/* MAIN SECTION */
+
+main {
+    padding-top: 63px;
 }
 
 .jumbotron {
@@ -152,6 +158,30 @@ form input:focus {
     color: white;
     border-color: white;
     background-color: rgb(177, 0, 0);
+}
+
+/* Barra laterale */
+
+.sidebar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 63px;
+    right: 0;
+    overflow-x: hidden;
+    transition: all 0.5s;
+    padding-top: 60px;
+    background-color: rgb(243, 198, 198);
+    border-left: 1px solid rgba(177, 0, 0, 0.199);
+
+}
+  
+.sidebar.show {
+    width: 250px;
+}
+  
+.cart-item {
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 1400px) {

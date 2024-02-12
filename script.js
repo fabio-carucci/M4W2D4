@@ -88,6 +88,8 @@ fetch('https://striveschool-api.herokuapp.com/books')
 })
 .catch(error => console.error('Errore durante la richiesta:', error.message));
 
+// Funzione per la ricerca dei libri con almeno 3 lettere
+
 function searchBooks(event) {
     event.preventDefault();
 
@@ -116,6 +118,8 @@ function searchBooks(event) {
     }
 }
 
+// Funzione che resetta la ricerca
+
 function resetSearch() {
     let myBooks = document.querySelectorAll('.col-6');
     document.getElementById('searchBooks').value = '';
@@ -128,6 +132,8 @@ function resetSearch() {
     myBtn.style.display = 'block';
   }
 
+// Listener per le funzioni di ricerca e reset ricerca
+
 let myBtn = document.getElementById("searchButton");
 myResetBtn = document.getElementById("resetButton");
 
@@ -139,4 +145,38 @@ document.getElementById('searchBooks').addEventListener('keypress', (e) => {
         searchBooks(e);
     }
 });
+
+// Spostamento elementi nel carrello
+
+let cartIcon = document.querySelector(".fa-cart-shopping");
+cartIcon.addEventListener("click", () => { 
+    cartSidebar.classList.toggle("show");
+});
+
+document.addEventListener("click", (e) => {
+    let addCartBtn = e.target.closest(".addCart");
+    if (addCartBtn) {
+        handleAddToCartClick(e);
+    }
+});
+
+function handleAddToCartClick(e) {
+    let addCartBtn = e.target;
+    let bookCard = addCartBtn.closest(".col-6");
+    let bookTitle = bookCard.querySelector('.card-title').textContent;
+    let bookPrice = bookCard.querySelector('.price').textContent;
+
+    let cartContainer = document.getElementById("cart");
+    let cartItem = document.createElement('div');
+    cartItem.classList.add('cart-item');
+    cartItem.innerHTML = `
+        <div>
+            <h6>${bookTitle}</h6>
+            <div>
+                <div>${bookPrice}</div>
+            </div>
+        </div>
+    `;
+    cartContainer.appendChild(cartItem);
+}
 
